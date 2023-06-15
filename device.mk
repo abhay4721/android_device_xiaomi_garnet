@@ -285,6 +285,15 @@ PRODUCT_PACKAGES += \
     ueventd-odm.rc \
     ueventd.qcom.rc
 
+# Inherit from ViPER4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
+# Input
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
+    $(LOCAL_PATH)/configs/idc/uinput-goodix.idc:system/usr/idc/uinput-goodix.idc
+
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh \
     $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot-parrot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-parrot.sh \
@@ -639,4 +648,3 @@ $(call inherit-product, vendor/xiaomi/garnet/garnet-vendor.mk)
 $(call inherit-product, vendor/bcr/bcr.mk)
 
 #Viperx
-$(call inherit-product, vendor/bcr/bcr.mk)
