@@ -63,21 +63,6 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
-                <mixPort name="dual_speaker_output" role="source" flags="AUDIO_OUTPUT_FLAG_DEEP_BUFFER">
-                     <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
-                              samplingRates="48000 96000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-                     <gains>
-                         <gain name="eq_bands" mode="AUDIO_GAIN_MODE_JOINT"
-                               minValueMB="-8400" maxValueMB="4000" defaultValueMB="0" stepValueMB="100"/>
-                     </gains>
-                     <extraParams>
-                         <param name="eq_band_60hz" value="30"/>
-                         <param name="eq_band_230hz" value="20"/>
-                         <param name="eq_band_910hz" value="0"/>
-                         <param name="eq_band_3600hz" value="15"/>
-                         <param name="eq_band_14000hz" value="10"/>
-                     </extraParams>
-                 </mixPort>
                 <mixPort name="raw" role="source" flags="AUDIO_OUTPUT_FLAG_FAST AUDIO_OUTPUT_FLAG_RAW">
                     <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>

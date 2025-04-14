@@ -131,37 +131,17 @@
     </effects>
     <postprocess>
         <stream type="music">
-            <apply effect="dap_mod"/>
+            <apply effect="music_helper"/>
         </stream>
         <stream type="ring">
+            <apply effect="ring_helper"/>
         </stream>
         <stream type="alarm">
+            <apply effect="alarm_helper"/>
         </stream>
         <stream type="voice_call">
         </stream>
         <stream type="notification">
-            <apply effect="dynamics_processing"/>
-        </stream>
-        <stream type="system">
-            <apply effect="dynamics_processing"/>
-        </stream>
-        <stream type="bluetooth_sco">
-        </stream>
-        <stream type="dtmf">
-        </stream>
-        <stream type="enforced_audible">
-        </stream>
-        <stream type="accessibility">
-        </stream>
-        <stream type="tts">
-        </stream>
-        <stream type="assistant">
-        </stream>
-        <stream type="call_assistant">
-        </stream>
-        <stream type="patch">
-        </stream>
-        <stream type="rerouting">
         </stream>
     </postprocess>  
     <preprocess>
