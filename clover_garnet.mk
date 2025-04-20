@@ -10,7 +10,7 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/clover/config/common_full_phone.mk)
 
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
@@ -28,7 +28,7 @@ TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_MATLOG := true
 
-PRODUCT_NAME := lineage_garnet
+PRODUCT_NAME := clover_garnet
 PRODUCT_DEVICE := garnet
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
@@ -37,6 +37,12 @@ PRODUCT_MODEL := 2312DRA50G
 PRODUCT_SYSTEM_NAME := garnet_global
 PRODUCT_SYSTEM_DEVICE := garnet
 
+# Clover assortment
+ TARGET_FACE_UNLOCK_SUPPORTED := true
+ TARGET_SUPPORTS_GOOGLE_RECORDER := true
+ TARGET_SUPPORTS_QUICK_TAP := true
+ USE_PIXEL_CHARGER := true 
+ 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="garnet_global-user 15 AQ3A.240912.001 OS2.0.6.0.VNRMIXM release-keys" \
     BuildFingerprint=Redmi/garnet_global/garnet:15/AQ3A.240912.001/OS2.0.6.0.VNRMIXM:user/release-keys \
