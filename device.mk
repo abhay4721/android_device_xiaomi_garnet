@@ -631,3 +631,9 @@ PRODUCT_PACKAGES += \
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/garnet/garnet-vendor.mk)
+
+#BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
+
+#Viperx
+$(call inherit-product, vendor/bcr/bcr.mk)
